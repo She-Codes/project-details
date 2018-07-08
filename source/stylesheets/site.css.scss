@@ -98,16 +98,26 @@ li {
 	// 	color: $highlite;
 	// }
 
-	a {
+	.read-more-link {
+		margin-top: 1em;
 		display: inline-block;
 		background: $highlite;
 		color: #FFF;
 		padding: 0.7em 1.2em;
-		box-shadow: 0.25rem 0.25rem 0.7rem rgba(113, 118, 119, 0.522);
-		box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-		box-shadow: 0.75em 0.75em 1.25em -0.75em rgba(0, 0, 0, 0.35);
+		box-shadow: 0 0 0 0 rgba(113, 118, 119, 0.522);
+		transform: translate(0, 0);
+		transition: all 0.2s cubic-bezier(0.55, 0, 0.75, 0.54);
+	}
+
+	.read-more-link:hover {
 		box-shadow: 0.45em 0.45em 1em -0.25em rgba(113, 118, 119, 0.522);
-		transform: translateZ(3.125em) translateX(-0.75em) translateY(-0.75em);
-		transform: translateZ(3.125em) translateX(-0.25em) translateY(-0.25em);
+		transform: translate(-0.25em, -0.25em);
+		transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}
+
+	.read-more-link:active {
+		box-shadow: 0 0 0 0 rgba(113, 118, 119, 0.522);
+		transform: translate(0, 0);
+		transition: all 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000);
 	}
 }
