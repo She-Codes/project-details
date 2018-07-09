@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=BioRhyme:400,700,800|Cabin:400,500,600" rel="stylesheet">
     <%= stylesheet_link_tag "site" %>
   </head>
-  <body>
+  <body class="<%= page_classes %>">
     <div class="wrapper">
       <%= yield %>
       <%= javascript_include_tag "site" %>
