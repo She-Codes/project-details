@@ -48,24 +48,24 @@ table {
 }
 /* end reset */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
   font-size: 16px;
 	font-family: 'Cabin', sans-serif;
 	background: #EBFBFE;
-	color: #061014;
+	color: $text-color;
 }
 
 .wrapper {
 	width: 90vw;
-	margin: 50px auto 10px;
-}
-
-h1 {
-	font-family: 'BioRhyme', serif;
-	font-weight: 800;
+	margin: 50px auto 50px;
 }
 
 a {
 	text-decoration: none;
 }
+
 

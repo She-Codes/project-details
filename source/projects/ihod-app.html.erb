@@ -1,0 +1,71 @@
+---
+title: iHOD Application
+---
+
+<header>
+  <h1>iHOD Application</h1>
+  <h2>Virginia House of Delegates Interactive legislation tracking application.</h2>
+  <p>Development on this app was already in progress when I began working with the House of Delegates and the overall design had already been established.  jQuery Mobile was used for the frontend as a solution for making the app accessible for the many delegates who access it using their House-issued iPads.  The backend was built using Rails.  
+  In addition to delegates and their staff, the app is widely used throughout the organization to accomplish department-specific tasks during a legislative session.  I contributed to building out certain features of the app specifically for different departments including the Enrolling and Tracking department and Committee Operations.  I also contributed to the 
+  frontend functionality of some of the overall bill tracking features.</p>
+</header>
+
+<div class="examples">
+  <div class="explanation ihod-agenda-form">
+    <h3>Agenda Form</h3>
+    <p>One of the key features of iHOD is the ability to set agendas for committee meetings.  The form contains standard inputs for certain information, 
+    but a major component of the form is the ability to add 'blocks' of bills to an agenda.  An example of the Agenda Block section is pictured below.</p>
+  </div>
+  <div class="image"><%= image_tag 'iHOD-agendas.png' %></div>
+
+  <div class="explanation ihod-adding-deleting-bills">
+    <h3>Adding and Deleting Bills</h3>
+    <p>Users are able to define 'blocks' which will then be addressed in committee meetings.  The available committee bills are fetched from the bill api and cached. The user can select and add bills from the modal.  When bills are deleted from 
+    the block they are again available for selection.</p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-adding-deleting-bills.gif' %></div>
+
+  <div class="explanation ihod-sorting-bills">
+    <h3>Sorting Bills in a Block</h3>
+    <p>Custom written javascript allows the sorting of bills in a block.  Bills are sorted alphabetically either by bill number or patron name.  A custom sort 
+    is also available with the help of jQuery UI's drag and drop widget.</p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-sorting-bills.gif' %></div>
+
+  <div class="explanation ihod-adding-deleting-block">
+    <h3>Adding and Deleting a Block</h3>
+    <p>Not only bills, but blocks as well can be added to an agenda and deleted.</p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-adding-deleting-block.gif' %></div>
+
+  <div class="explanation ihod-reordering-blocks">
+    <h3>Reordering Blocks</h3>
+    <p>Because blocks can often get quite large, drag and drop was not feasible and would've made it more difficult 
+    for the user to reorder blocks because of the increase in dragging distance.  Instead the blocks can be reordered in the DOM one by one using up and down buttons.</p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-reordering-blocks.gif' %></div>
+
+  <div class="explanation ihod-moving-bills-between-blocks">
+    <h3>Moving Bills Between Blocks</h3>
+    <p>Again, because of the potentially large size of blocks, I decided against drag and drop for moving bills from one to another. 
+    Once the bills to be moved are selected, all that's needed is to select the destination block.</p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-moving-bills-between-blocks.gif' %></div>
+
+  <div class="explanation ihod-form-validation">
+    <h3>Form Validation</h3>
+    <p>The form is validated with Rails, but there are also some javascript safeguards in place.  Users can select block types, but Doc and Link blocks can not contain 
+    bills so as long as the block contains bills, the block type can not be changed.</p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-form-validation.gif' %></div>
+
+  <div class="explanation ihod-enrolling-memo">
+    <h3>Enrolling Memo Form</h3>
+    <p>The Enrolling and Tracking department needed specialized forms, as well.  The form used to draft an enrolling memo is one example.  A list of 
+    bills was fetched and cached from an API.  Using mouse events bills are easily highlighted and selected.  Bills of a certain type can be filtered using the checkbox 
+    on the left and all bills can be cleared using the button on the right. </p>
+  </div>
+  <div class="image"><%= image_tag 'ihod-enrolling-memo.gif' %></div>
+</div><!-- end .examples -->
+
+
