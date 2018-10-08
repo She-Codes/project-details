@@ -6,43 +6,41 @@ title: IHOD Redesign
   <h1>IHOD Redesign</h1>
   <h2>Currently In Progress.</h2>
   <p>IHOD was originally built using Ruby on Rails for the backend and jQuery Mobile for the frontend.  
-  Having been several years since the app was originally built I felt that maybe it was time to pull out jQuery Mobile and to update the 
-  frontend of the app.  The new face of IHOD is currently being built using Bootstrap, jQuery and as much vanilla Javascript as possible. We are a small team and 
-  did not want to use any Javascript frameworks such as React as most of the team is unfamiliar and the timeframe did not allow for everyone to get up to speed.  In the interest of 
-  time and maintainability and the fact that we felt that the needs of the app could be met just fine making sure to organize code well.</p>
-  <p>I made the decision to keep the color scheme similar so as to not to introduce too much change at once.</p>
+  Having been several years since the app was originally built I felt it was time to update the 
+  frontend of the app.  The new face of IHOD is currently in progress using Bootstrap, jQuery and as much vanilla JavaScript as possible. We are a small team and 
+  did not want to use a JavaScript framework such as React since most of the team is unfamiliar and the timeframe did not allow for everyone to get up to speed.  We also felt that 
+  the needs of the app could be met just fine minus a framework as long as code was modularized and written cleanly.  
+  I made the decision to keep the color scheme similar as users in the organization tend to be generally averse to too much change at once.</p>
 </header>
 
 <div class="examples">
   <h3 class="all-bills">All Bills</h3>
-  <p class="description all-bills">The All Bills view is a list of bills that can be toggled between category types and where 
+  <p class="description all-bills">The All Bills view is a list of bills that can be toggled between category types, and where 
   additional information such as comments and staff summaries can be toggled on and off.  There is a filter for the list 
-  which was rewritten using vanilla Javascript since the jQuery Mobile widget was no longer available.  Comment and Staff Summary 
+  which was rewritten using vanilla JavaScript since the jQuery Mobile widget would no longer be used.  Comment and Staff Summary 
   elements are only filtered when they are turned on.  Removing some buttons and labels and left-aligning 
-  everything I felt gave the header area a less cluttered look.  The list itself was not changed much.</p>
+  everything I felt gave the header area a less cluttered look.  The list itself was not changed much.  
+  Below the original view is shown first, followed by the updated version.</p>
   <div class="image all-bills"><%= image_tag 'iHOD-all-bills2.png' %></div>
   <div class="image all-bills"><%= image_tag 'iHOD-all-bills-redesign.png' %></div>
 
-  <h3 class="all-bills-comments">All Bills With Comments</h3>
-  <p class="description all-bills-comments">Again the list was not changed much other than giving a uniform 
-  background to the entire list to create a more uniform look.  I also felt that removing the circular background from 
-  the comments created a more uniform look.</p>
+  <h3 class="all-bills-comments">All Bills View With Comments</h3>
+  <p class="description all-bills-comments">As mentioned above, the list was not changed much other than giving a uniform 
+  background to the entire list.  I also felt that removing the circular background from 
+  the comments created a less cluttered look.</p>
   <div class="image all-bills-comments"><%= image_tag 'iHOD-all-bills-comments.png' %></div>
   <div class="image all-bills-comments"><%= image_tag 'iHOD-all-bills-comments-redesign.png' %></div>
 
   <h3 class="viewing-comments">Viewing Comments</h3>
-  <p class="description viewing-comments">Each year the Speaker of the House of Delegates appoints young students from across Virginia to serve as House pages during the regular session of the General Assembly.   
-  As the only front-end developer on this project, I worked with a back-end developer to create a portal where students and parents could complete the application process.  Administrative staff are able 
-  to track applicants throughout the process and review applications.  As one of my first projects with the HOD, my main goal was to design visually appealing and user-friendly forms and to display applicant data in 
-  an easy to read format.  Technologies used: Ruby on Rails, HTML, SCSS, jQuery.</p>
+  <p class="description viewing-comments">Bill comments are one example of several areas within the app 
+  where the user is navigated to a new page to display a small amount of information.  In the new version this 
+  is resolved with the use of modals.</p>
   <div class="image viewing-comments"><%= image_tag 'iHOD-comment-show.png' %></div>
   <div class="image viewing-comments"><%= image_tag 'iHOD-comment-show-redesign.png' %></div>
 
   <h3 class="editing-deleting-comments">Editing and Deleting Comments</h3>
-  <p class="description editing-deleting-comments">Each year the Speaker of the House of Delegates appoints young students from across Virginia to serve as House pages during the regular session of the General Assembly.   
-  As the only front-end developer on this project, I worked with a back-end developer to create a portal where students and parents could complete the application process.  Administrative staff are able 
-  to track applicants throughout the process and review applications.  As one of my first projects with the HOD, my main goal was to design visually appealing and user-friendly forms and to display applicant data in 
-  an easy to read format.  Technologies used: Ruby on Rails, HTML, SCSS, jQuery.</p>
+  <p class="description editing-deleting-comments">Taking it a step further, keeping the user on the same page 
+  not just for viewing a comment, but for editing and deleting it as well creates a more seamless experience for the user.</p>
   <div class="image"><%= image_tag 'ihod-edit-comment-redesign.gif' %></div>
   <div class="image"><%= image_tag 'ihod-delete-comment2.gif' %></div>
 </div><!-- end .examples -->

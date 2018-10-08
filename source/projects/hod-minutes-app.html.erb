@@ -6,9 +6,9 @@ title: House Minutes Application
   <h1>House Minutes Application</h1>
   <h2>Virginia House of Delegates application 
   used to record the journal day of a legislative session.</h2>
-  <p>This app was built using a Rails backend and a combination of Bootstrap, jQuery, and vanilla javascript, and SASS for the front-end.
-  The majority of the javascript was written by myself using vanilla js when possible with some
-  jQuery sprinkled in to work with Bootstrap plugins and ajax calls to the backend apis.  It is used in real-time during a legislative session so speed, accuracy and ease-of-use is paramount.</p>
+  <p>This app was built using a Rails backend and a combination of Bootstrap, jQuery, vanilla JavaScript, and SASS for the frontend.
+  The majority of the JavaScript was written by myself using vanilla when possible, with some
+  jQuery sprinkled in to work with Bootstrap plugins and for AJAX calls to the backend APIs.  The app is used in real-time during a legislative session so speed, accuracy and ease-of-use is paramount.</p>
 </header>
 
 <div class="examples">
@@ -22,25 +22,26 @@ title: House Minutes Application
 
   <div class="explanation minutes-menu">
     <h3>App Menus</h3>
-    <p>This project had several sections that required their own menus.
+    <p>There are several areas of the app that require their own menus.
     The user is easily able to transition between the main application menu and the
-    the menu unique to that area of the app.  They also have the ability to hide all menus altogether.</p>
+    current menu unique to that area of the app.  There is also the ability to hide all menus and expand the main 
+    viewing area.</p>
   </div>
   <div class="image"><%= image_tag 'minutes-app-main-menu.gif' %></div>
 
   <div class="explanation minutes-passed">
     <h3>Menu Actions</h3>
-    <p>This is an example of front-end communication with the backend api.  A user is able to select multiple
-    row and then apply a menu action, the results of which are immediately reflected
-    on the corresponding rows via ajax communication.  There are several other interactions available 
-    in this section of the app including turning menus on and off depending on which selections are made, 
-    deleting previously added actions, and adding cutom actions.</p>
+    <p>This is an example of communication with the backend API.  A user is able to select multiple
+    rows and apply a menu action, the results of which are immediately reflected
+    in the corresponding rows via AJAX.  There are several other features  
+    in this section of the app including disabling menus depending on which selections are made, 
+    deleting previously added actions, and adding custom actions not available by menu.</p>
   </div>
-  <div class="image"><%= image_tag 'minutes-app-passed-block.gif' %></div>
+  <div class="image"><%= image_tag 'minutes-app-passed-block2.gif' %></div>
 
   <div class="explanation minutes-custom-action">
     <h3>Custom Actions</h3>
-    <p>The user can dynamically add a custom action without using the menu.  A small CSS animation provides feedback to the user that
+    <p>As mentioned above, the user can dynamically add a custom action without using the menu.  A small CSS animation provides feedback to the user that
     the action was saved on the server side.</p>
   </div>
   <div class="image"><%= image_tag 'minutes-app-custom-action.gif' %></div>
@@ -48,15 +49,15 @@ title: House Minutes Application
   <div class="explanation minutes-changes">
     <h3>Detecting Changes</h3>
     <p>Once the document is changed, the indicator on the save button changes to alert the user that changes 
-    need to be saved.  The app detects changes on keyup, as well as, whether items have been rearranged via 
-    'drag n drop' or whether items have been added via the menus.  If the user tries to navigate
+    need to be saved.  The app detects changes on keyup, whether items have been rearranged via 
+    'drag and drop', and whether items have been added via the menus.  If the user tries to navigate
     away without saving changes, they receive a warning.</p>
   </div>
   <div class="image"><%= image_tag 'minutes-app-detect-changes.gif', width: '950' %></div>
 
   <div class="explanation minutes-delete">
     <h3>Deleting Items</h3>
-    <p>Items can easily be deleted using a control that appears when the item item is either hovered over or active.
+    <p>Items can easily be deleted using a control that appears when the item item is either hovered or active.
     Because this is a destructive action the UI prompts the user to click twice by initially changing shape.
     To cancel a delete, the user can simply click elsewhere on the page.</p>
   </div>

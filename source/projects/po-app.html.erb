@@ -4,20 +4,20 @@ title: Purchase Order Application
 
 <header>
   <h1>Purchase Order Application</h1>
-  <h2>Utilized by the Virginia House of Delegates Support Services Department used to manage vendors and purchases.</h2>
+  <h2>Utilized by the Virginia House of Delegates Support Services to manage vendors and purchases.</h2>
   <p>This application was an update of an older system created with Microsoft Sharepoint.  
-  The new version is built with Ruby on Rails, Bootstrap, vanilla JS where possible and a bit of 
+  The new version is built with Ruby on Rails, Bootstrap, vanilla JavaScript where possible and a bit of 
   jQuery sprinkled throughout.</p>
 </header>
 
 <div class="examples">
   <div class="explanation po-form">
     <h3>Purchase Order Form</h3>
-    <p>The design of the purchase order form was very important to the user.  It is an updated version 
-  of a Sharepoint form that was created years ago.  The header of the form needed to remain very similar to 
-  the original, but fonts were updated.  The main highlights would be the typeahead written by me in vanilla javascript to fuzzy search vendor names.  Adding an item to the 
-  form also updates the DOM with a new row containing textareas and inputs where the running totals are 
-  calculated.</p>
+    <p>The primary users of the application were very involved in the design of the form.  It is an updated version 
+  of a Sharepoint form that was created years ago and the user did not want to stray too far from the original design.  
+  The header of the page needed to remain very similar to the original as did other elements of the page, but fonts and 
+  other design elements were changed to give a more updated feel.  The main highlights would be the custom JavaScript 
+  typeahead written to fuzzy search vendor names and the dynamic order area.</p>
   </div>
   <div class="image"><%= image_tag 'po-form-new.png' %></div>
 
@@ -25,7 +25,7 @@ title: Purchase Order Application
     <h3>Custom Built Typeahead</h3>
     <p>Because the PO app contains sensitive information and actual vendor data is stored in the database, 
     the Codepen to the right shows a demo of the same typeahead using almost the same code used in the app with 
-    data from an anime api. As with the widget in the app, you can use the up and down arrow keys to navigate the list
+    data from an anime API. As with the widget in the app, you can use the up and down arrow keys to navigate the list
     of results and press the Enter key to select one.  Alternatively you can use the mouse to scroll and select.</p>
   </div>
   <div class="image">
@@ -36,8 +36,8 @@ title: Purchase Order Application
   <div class="explanation po-adding-deleting-items">
     <h3>Adding and Deleting Items</h3>
     <p>When 'Add Item' is clicked, a new row is added to the actual 'Purchase Order' section of the form.  As numbers are added to the 'Qty' and 'Unit Cost' inputs, row totals,
-     as well as a grand total are calculated using Javascript.  An item can easily be deleted using the red trash can 
-     to the right.  Item is actually a nested Rails model which is being handled within the Purchase Order form with the help of Javascript.</p>
+     as well as a grand total, are calculated using JavaScript.  An item can easily be deleted using the red trash can 
+     to the right.  Item is actually a nested Rails model that is being handled within the Purchase Order form with the help of JavaScript.</p>
   </div>
   <div class="image"><%= image_tag 'po-adding-deleting-items.gif' %></div>
 </div><!-- end .examples -->
