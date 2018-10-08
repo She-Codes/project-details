@@ -8,6 +8,11 @@ end
 # reload changed pages automatically
 activate :livereload
 
+# deploy to GitHub Pages
+activate :gh_pages do |gh_pages|
+  gh_pages.remote = 'git@github.com:She-Codes/project-details.git'
+  gh_pages.branch = 'master'
+end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
